@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "This staging model prepares customer data for further analysis."
+    columns:
+      - name: customer_id
+        description: "The unique identifier for a customer."
+        tests:
+          - not_null
+          - unique
+      - name: customer_name
+        description: "The name of the customer."
+        tests:
+          - not_null

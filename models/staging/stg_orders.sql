@@ -3,10 +3,11 @@ with source as (
 ),
 renamed as (
     select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
+        id as order_id,         -- Remplace 'id' par 'order_id'
+        customer as customer_id, -- Remplace 'customer' par 'customer_id'
+        ordered_at as order_date, -- Remplace 'ordered_at' par 'order_date'
+        'active' as status       -- Ajoutez une valeur par défaut pour 'status' si nécessaire
     from source
 )
 select * from renamed
+
